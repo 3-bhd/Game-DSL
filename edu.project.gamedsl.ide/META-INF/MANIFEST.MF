@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: edu.project.gamedsl.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: edu.project.gamedsl.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: edu.project.gamedsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: edu.project.gamedsl,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: edu.example.gamedsl.ide.contentassist.antlr.internal,
+ edu.example.gamedsl.ide.contentassist.antlr

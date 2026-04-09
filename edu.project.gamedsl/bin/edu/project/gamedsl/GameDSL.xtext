@@ -1,0 +1,36 @@
+grammar edu.example.gamedsl.GameDSL with org.eclipse.xtext.common.Terminals
+
+generate gameDSL "http://www.example.edu/gamedsl/GameDSL"
+
+Model:
+    statements+=Statement*;
+
+Statement:
+    Board | Player | TurnOrder | Piece | Placement | Move | Rule | WinCondition;
+
+Board:
+    'board' rows=INT 'x' cols=INT;
+
+Player:
+    'player' name=STRING;
+
+TurnOrder:
+    'turn_order' '[' players+=STRING (',' players+=STRING)* ']';
+
+Piece:
+    'piece' name=STRING 'symbol' symbol=STRING 'owner' owner=STRING ('x' count=INT)?;
+
+Placement:
+    'place' piece=[Piece] 'at' range=CoordinateRange 'for' owner=STRING;
+
+Move:
+    'move' piece=[Piece] 'direction' direction=STRING steps=INT ('if' condition=STRING)?;
+
+Rule:
+    'rule' name=STRING 'if' condition=STRING 'then' action=STRING;
+
+WinCondition:
+    'win_condition' 'if' condition=STRING 'then' 'winner' '=' winner=STRING;
+
+CoordinateRange:
+    '[' startRow=INT ',' startCol=INT ']' '-' '[' endRow=INT ',' endCol=INT ']';

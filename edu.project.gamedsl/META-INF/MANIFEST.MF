@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: edu.project.gamedsl
+Bundle-ManifestVersion: 2
+Bundle-Name: edu.project.gamedsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: edu.project.gamedsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.19.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.38.0",
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: edu.example.gamedsl.gameDSL.impl,
+ edu.example.gamedsl.scoping,
+ edu.example.gamedsl.serializer,
+ edu.example.gamedsl.gameDSL,
+ edu.example.gamedsl.validation,
+ edu.example.gamedsl.parser.antlr.internal,
+ edu.example.gamedsl,
+ edu.example.gamedsl.parser.antlr,
+ edu.example.gamedsl.services,
+ edu.example.gamedsl.gameDSL.util,
+ edu.example.gamedsl.generator
+Import-Package: org.apache.log4j

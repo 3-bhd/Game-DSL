@@ -1,0 +1,14 @@
+board 8 x 8
+player "white"
+player "black"
+
+turn_order ["white", "black"]
+
+piece "pawn" symbol "p" owner "white" x 8
+piece "pawn" symbol "p" owner "black" x 8
+
+place pawn at [2,1] - [2,8] for "white"
+
+move pawn direction "forward" 1 if "not blocked"
+
+win_condition if "king is_checkmated" then winner = "opponent"

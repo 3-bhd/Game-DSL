@@ -1,0 +1,15 @@
+board 3 x 3
+player "X"
+player "O"
+turn_order ["X", "O"]
+
+piece "mark_x" symbol "X" owner "X" x 5
+piece "mark_o" symbol "O" owner "O" x 5
+
+move mark_x direction "any" 1 if "cell_empty"
+move mark_o direction "any" 1 if "cell_empty"
+
+rule "no_overwrite" if "not cell_empty" then "invalid_move"
+
+win_condition if "three_in_a_row" then winner = "current_player"
+win_condition if "board_full and not three_in_a_row" then winner = "draw"

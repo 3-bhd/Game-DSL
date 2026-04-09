@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: edu.project.gamedsl.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: edu.project.gamedsl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: edu.project.gamedsl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: edu.project.gamedsl,
+ edu.project.gamedsl.ide,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.14.300",
+ org.eclipse.ui.ide;bundle-version="3.18.500",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: edu.example.gamedsl.ui.quickfix,
+ edu.example.gamedsl.ui.contentassist,
+ edu.project.gamedsl.ui.internal
+Bundle-Activator: edu.project.gamedsl.ui.internal.GamedslActivator

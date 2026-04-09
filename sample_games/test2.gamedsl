@@ -1,0 +1,18 @@
+board 9 x 9
+player "X"
+
+piece "1" symbol "1" owner "X"
+piece "2" symbol "2" owner "X"
+piece "3" symbol "3" owner "X"
+piece "4" symbol "4" owner "X"
+piece "5" symbol "5" owner "X"
+piece "6" symbol "6" owner "X"
+piece "7" symbol "7" owner "X"
+piece "8" symbol "8" owner "X"
+piece "9" symbol "9" owner "X"
+
+rule "unique_row" if "duplicate_in_row" then "invalid_move"
+rule "unique_column" if "duplicate_in_column" then "invalid_move"
+rule "unique_box" if "duplicate_in_box" then "invalid_move"
+
+win_condition if "board_filled and all_rules_valid" then winner = "X"
